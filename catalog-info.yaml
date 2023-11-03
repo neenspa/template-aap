@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1beta1
+kind: Component
+metadata:
+  name: template-aap
+  metadata:
+  annotations:
+    argocd/app-name: template-aap
+    backstage.io/adr-location: docs/adr
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: template-aap
+    backstage.io/kubernetes-namespace: gitops-tekton
+    github.com/project-slug: neenspa/template-aap
+    janus-idp.io/tekton-enabled: "true"
+  links:
+    - url: https://console-openshift-console.apps.democp.vega.local/pipelines/ns/gitops-tekton/
+      title: Pipelines
+      icon: web
+    - url: https://devspaces.apps.democp.vega.local/#https://github.com/neenspa/template-aap?che-editor=che-incubator/che-code/latest&devfilePath=.devfile-vscode.yaml
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+spec:
+  type: pipelines
+  owner: user:guest
+  lifecycle: production
